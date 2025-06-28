@@ -1,0 +1,17 @@
+name: TeleportPlugin
+main: com.example.teleportplugin.TeleportPlugin
+version: 1.0
+api-version: 1.21
+description: Paper plugin for /home, /sethome, /tp, /tpaccept, /trade commands with death location tracking
+authors: ["YourName"]
+commands:
+  home:
+    description: Teleport to your home
+  sethome:
+    description: Set your home location
+  tp:
+    description: Request to teleport to another player
+  tpaccept:
+    description: Accept a teleport request
+  trade:
+    description: Trade items with another player
