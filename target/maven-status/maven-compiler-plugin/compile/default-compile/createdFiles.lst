@@ -1,0 +1,11 @@
+com\example\teleportplugin\TradeManager$TradeSession.class
+com\example\teleportplugin\SetHomeCommand.class
+com\example\teleportplugin\TpAcceptCommand.class
+com\example\teleportplugin\TradeManager$1.class
+com\example\teleportplugin\HomeCommand.class
+com\example\teleportplugin\TeleportPlugin$TeleportRequest.class
+com\example\teleportplugin\TradeCommand.class
+com\example\teleportplugin\TeleportPlugin.class
+com\example\teleportplugin\TradeListener.class
+com\example\teleportplugin\TpCommand.class
+com\example\teleportplugin\TradeManager.class
