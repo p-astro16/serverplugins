@@ -2,7 +2,7 @@ name: TeleportPlugin
 main: com.example.teleportplugin.TeleportPlugin
 version: 1.0
 api-version: 1.21
-description: Spigot plugin for /home, /sethome, /tp, /trade commands with death location tracking
+description: Spigot plugin for /home, /sethome, /tp, /trade commands with death location tracking and product scraping
 authors: ["p-astro16"]
 
 commands:
@@ -16,3 +16,11 @@ commands:
     description: Accept a teleport request
   trade:
     description: Trade items with another player
+  product:
+    description: Manage product information with fallback scraping methods
+    usage: /product <info|list|search|recover|stats|rarity> [args]
+
+permissions:
+  product.admin:
+    description: Allows running product recovery operations
+    default: op
