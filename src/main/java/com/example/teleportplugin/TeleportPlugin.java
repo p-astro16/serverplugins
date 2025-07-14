@@ -22,11 +22,13 @@ public class TeleportPlugin extends JavaPlugin implements Listener {
     private final HashMap<UUID, Location> homes = new HashMap<>();
     private final HashMap<UUID, TeleportRequest> teleportRequests = new HashMap<>();
     private TradeManager tradeManager;
+    private ProductScraper productScraper;
 
     @Override
     public void onEnable() {
         // Initialize managers
         tradeManager = new TradeManager(this);
+        productScraper = new ProductScraper(this);
         
         // Register commands
         getCommand("home").setExecutor(new HomeCommand(this));
@@ -34,12 +36,14 @@ public class TeleportPlugin extends JavaPlugin implements Listener {
         getCommand("tp").setExecutor(new TpCommand(this));
         getCommand("tpaccept").setExecutor(new TpAcceptCommand(this));
         getCommand("trade").setExecutor(new TradeCommand(tradeManager));
+        getCommand("product").setExecutor(new ProductCommand(productScraper));
         
         // Register events
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getPluginManager().registerEvents(new TradeListener(tradeManager), this);
         
         getLogger().info("TeleportPlugin enabled!");
+        getLogger().info("Product scraping system initialized with fallback methods");
     }
     
     @EventHandler
@@ -258,6 +262,10 @@ public class TeleportPlugin extends JavaPlugin implements Listener {
 
     public void removeTeleportRequest(UUID to) {
         teleportRequests.remove(to);
+    }
+
+    public ProductScraper getProductScraper() {
+        return productScraper;
     }
 
     public static class TeleportRequest {

@@ -1,0 +1,23 @@
+# Build artifacts
+target/
+*.jar
+
+# IDE files
+.idea/
+*.iml
+.eclipse/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Product scraper cache and temporary files
+product_cache.json
+recovery_report.txt
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo

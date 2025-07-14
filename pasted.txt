@@ -1,0 +1,52 @@
+PRODUCT SCRAPING LOGS - ERROR REPORT
+=====================================
+
+[2024-01-15 10:30:15] INFO: Starting product scraping session
+[2024-01-15 10:30:16] INFO: Attempting to scrape product: Diamond Sword
+[2024-01-15 10:30:18] ERROR: Failed to scrape Diamond Sword - Connection timeout to primary source
+[2024-01-15 10:30:18] WARN: Product ID: minecraft:diamond_sword - Primary scraping failed
+
+[2024-01-15 10:30:20] INFO: Attempting to scrape product: Enchanted Book
+[2024-01-15 10:30:22] ERROR: Failed to scrape Enchanted Book - HTTP 404 Not Found
+[2024-01-15 10:30:22] WARN: Product ID: minecraft:enchanted_book - Primary scraping failed
+
+[2024-01-15 10:30:25] INFO: Attempting to scrape product: Netherite Ingot
+[2024-01-15 10:30:27] ERROR: Failed to scrape Netherite Ingot - Invalid JSON response
+[2024-01-15 10:30:27] WARN: Product ID: minecraft:netherite_ingot - Primary scraping failed
+
+[2024-01-15 10:30:30] INFO: Attempting to scrape product: Elytra
+[2024-01-15 10:30:32] ERROR: Failed to scrape Elytra - Rate limit exceeded
+[2024-01-15 10:30:32] WARN: Product ID: minecraft:elytra - Primary scraping failed
+
+[2024-01-15 10:30:35] INFO: Attempting to scrape product: Mending Book
+[2024-01-15 10:30:37] ERROR: Failed to scrape Mending Book - Server unavailable (503)
+[2024-01-15 10:30:37] WARN: Product ID: minecraft:enchanted_book:mending - Primary scraping failed
+
+[2024-01-15 10:30:40] INFO: Attempting to scrape product: Beacon
+[2024-01-15 10:30:42] ERROR: Failed to scrape Beacon - Authentication failed
+[2024-01-15 10:30:42] WARN: Product ID: minecraft:beacon - Primary scraping failed
+
+[2024-01-15 10:30:45] INFO: Attempting to scrape product: Shulker Box
+[2024-01-15 10:30:47] ERROR: Failed to scrape Shulker Box - DNS resolution failed
+[2024-01-15 10:30:47] WARN: Product ID: minecraft:shulker_box - Primary scraping failed
+
+[2024-01-15 10:30:50] INFO: Attempting to scrape product: Dragon Head
+[2024-01-15 10:30:52] ERROR: Failed to scrape Dragon Head - Content parsing error
+[2024-01-15 10:30:52] WARN: Product ID: minecraft:dragon_head - Primary scraping failed
+
+SUMMARY:
+========
+Total products attempted: 8
+Successful scrapes: 0
+Failed scrapes: 8
+Failure types:
+- Connection timeouts: 1
+- HTTP errors: 2
+- JSON parsing errors: 1
+- Rate limiting: 1
+- Server unavailable: 1
+- Authentication failures: 1
+- DNS failures: 1
+- Content parsing: 1
+
+All products need fallback scraping methods!
